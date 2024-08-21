@@ -60,6 +60,41 @@ namespace WfaExemplo
 
         private void btnCriar_Click(object sender, EventArgs e)
         {
+            switch (cmbForma.Text)
+            {
+                case "Quadrado":
+                    btnQuadrado();
+                    break;
+                case "Triangulo":
+                default:
+                    break;
+            }
+
+            
+            if (cmbForma.Text.Equals("Triangulo"))
+            {
+                switch (cmbTriangulo.Text)
+                {
+                    case "Reto":
+                        cmbReto();
+                        break;
+                }
+                
+            }
+        }
+
+        private void cmbReto()
+        {
+            FormaGeometrica trianguloR = new TR()
+            {
+                BaseT = Convert.ToDouble(txtBase.Text),
+                AlturaT = Convert.ToDouble(txtAltura.Text)
+            };
+            cmbObjetos.Items.Add(trianguloR);
+        }
+
+        private void btnQuadrado()
+        {
             if (cmbForma.Text.Equals("Quadrado"))
             {
                 FormaGeometrica quadrado = new Quadrado()

@@ -31,5 +31,9 @@ namespace WfaExemplo
             hipotenusa = System.Math.Sqrt(Math.Pow(_base, 2) + Math.Pow(altura, 2));
             return (_base + (hipotenusa * 2));
         }
+        public override string ToString()
+        {
+            return $"Triangulo I. ({_base} , {altura})";
+        }
     }
 }

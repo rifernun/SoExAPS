@@ -32,6 +32,9 @@
         {
             return baseT + alturaT + hipotenusa();
         }
-
+        public override string ToString()
+        {
+            return $"Triangulo R. ({baseT} , {alturaT})";
+        }
     }
 }
