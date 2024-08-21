@@ -20,5 +20,10 @@
         {
             return _base * 4;
         }
+
+        public override string ToString()
+        {
+            return $"Quadrado ({_base})";
+        }
     }
 }
